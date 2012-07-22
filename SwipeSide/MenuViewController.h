@@ -7,7 +7,21 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "HomeViewController.h"
+
+typedef enum 
+{
+    Left = 0,
+    Middle = 1,
+    Right = 2
+}Position;
 
 @interface MenuViewController : UIViewController
+{
+    HomeViewController  *_homeController;
+    Position            _position;
+}
+
+@property(nonatomic, strong) IBOutlet HomeViewController    *homeController;
 
 @end

@@ -10,9 +10,14 @@
 
 @interface MenuViewController ()
 
+-(void)handleRightSwipe:(UISwipeGestureRecognizer *)swipe;
+-(void)handleLeftSwipe:(UISwipeGestureRecognizer *)swipe;
+
 @end
 
 @implementation MenuViewController
+
+@synthesize homeController = _homeController;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -26,7 +31,18 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    self.homeController = [[HomeViewController alloc] initWithNibName:@"HomeViewController" bundle:nil];
+    [self.view addSubview:self.homeController.view];
+    _position = Middle;
+    
+    UISwipeGestureRecognizer *rightSwipe = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleRightSwipe:)];
+    rightSwipe.direction = UISwipeGestureRecognizerDirectionRight;
+    
+    UISwipeGestureRecognizer *leftSwipe = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleLeftSwipe:)];
+    leftSwipe.direction = UISwipeGestureRecognizerDirectionLeft;
+    
+    [self.homeController.view addGestureRecognizer:rightSwipe];
+    [self.homeController.view addGestureRecognizer:leftSwipe];
 }
 
 - (void)viewDidUnload
@@ -39,6 +55,37 @@
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
+}
+
+- (void)handleRightSwipe:(UISwipeGestureRecognizer *)swipe
+{    
+    [UIView animateWithDuration:0.2 animations:^{
+        if (Middle == _position) {
+            self.homeController.view.transform = CGAffineTransformMakeTranslation(150, 0);
+            _position = Right;
+        }
+        else if (Left == _position)
+        {
+            self.homeController.view.transform = CGAffineTransformIdentity;
+            _position = Middle;
+        }
+    }];
+}
+
+-(void)handleLeftSwipe:(UISwipeGestureRecognizer *)swipe
+{
+    [UIView animateWithDuration:0.2 animations:^{
+        if (Middle == _position)
+        {
+            self.homeController.view.transform = CGAffineTransformMakeTranslation(-150, 0);
+            _position = Left;
+        }
+        else if (Right == _position)
+        {
+            self.homeController.view.transform = CGAffineTransformIdentity;
+            _position = Middle;
+        }
+    }];
 }
 
 @end

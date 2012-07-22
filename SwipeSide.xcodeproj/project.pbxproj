@@ -14,7 +14,9 @@
 		C4145FCC15BC5A1A000D4CE5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C4145FCB15BC5A1A000D4CE5 /* main.m */; };
 		C4145FD015BC5A1A000D4CE5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C4145FCF15BC5A1A000D4CE5 /* AppDelegate.m */; };
 		C4145FD315BC5A1A000D4CE5 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4145FD115BC5A1A000D4CE5 /* MainStoryboard.storyboard */; };
-		C4145FD615BC5A1A000D4CE5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4145FD515BC5A1A000D4CE5 /* ViewController.m */; };
+		C4B5228F15BC63640073F41E /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4B5228D15BC63640073F41E /* MenuViewController.m */; };
+		C4B5229515BC64520073F41E /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4B5229315BC64520073F41E /* HomeViewController.m */; };
+		C4B5229815BC65850073F41E /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4B5229715BC65850073F41E /* HomeViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,15 +24,18 @@
 		C4145FBF15BC5A1A000D4CE5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C4145FC115BC5A1A000D4CE5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C4145FC315BC5A1A000D4CE5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		C4145FC715BC5A1A000D4CE5 /* SwipeSide-Info.plist */ = {isa = PBXFileReference; path = "SwipeSide-Info.plist"; sourceTree = "<group>"; };
+		C4145FC715BC5A1A000D4CE5 /* SwipeSide-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SwipeSide-Info.plist"; sourceTree = "<group>"; };
 		C4145FC915BC5A1A000D4CE5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C4145FCB15BC5A1A000D4CE5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		C4145FCD15BC5A1A000D4CE5 /* SwipeSide-Prefix.pch */ = {isa = PBXFileReference; path = "SwipeSide-Prefix.pch"; sourceTree = "<group>"; };
-		C4145FCE15BC5A1A000D4CE5 /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		C4145FCD15BC5A1A000D4CE5 /* SwipeSide-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwipeSide-Prefix.pch"; sourceTree = "<group>"; };
+		C4145FCE15BC5A1A000D4CE5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C4145FCF15BC5A1A000D4CE5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		C4145FD215BC5A1A000D4CE5 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		C4145FD415BC5A1A000D4CE5 /* ViewController.h */ = {isa = PBXFileReference; path = ViewController.h; sourceTree = "<group>"; };
-		C4145FD515BC5A1A000D4CE5 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		C4B5228C15BC63640073F41E /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
+		C4B5228D15BC63640073F41E /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
+		C4B5229215BC64520073F41E /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		C4B5229315BC64520073F41E /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		C4B5229715BC65850073F41E /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,9 +85,12 @@
 				C4145FCE15BC5A1A000D4CE5 /* AppDelegate.h */,
 				C4145FCF15BC5A1A000D4CE5 /* AppDelegate.m */,
 				C4145FD115BC5A1A000D4CE5 /* MainStoryboard.storyboard */,
-				C4145FD415BC5A1A000D4CE5 /* ViewController.h */,
-				C4145FD515BC5A1A000D4CE5 /* ViewController.m */,
 				C4145FC615BC5A1A000D4CE5 /* Supporting Files */,
+				C4B5228C15BC63640073F41E /* MenuViewController.h */,
+				C4B5228D15BC63640073F41E /* MenuViewController.m */,
+				C4B5229215BC64520073F41E /* HomeViewController.h */,
+				C4B5229315BC64520073F41E /* HomeViewController.m */,
+				C4B5229715BC65850073F41E /* HomeViewController.xib */,
 			);
 			path = SwipeSide;
 			sourceTree = "<group>";
@@ -151,6 +159,7 @@
 			files = (
 				C4145FCA15BC5A1A000D4CE5 /* InfoPlist.strings in Resources */,
 				C4145FD315BC5A1A000D4CE5 /* MainStoryboard.storyboard in Resources */,
+				C4B5229815BC65850073F41E /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -163,7 +172,8 @@
 			files = (
 				C4145FCC15BC5A1A000D4CE5 /* main.m in Sources */,
 				C4145FD015BC5A1A000D4CE5 /* AppDelegate.m in Sources */,
-				C4145FD615BC5A1A000D4CE5 /* ViewController.m in Sources */,
+				C4B5228F15BC63640073F41E /* MenuViewController.m in Sources */,
+				C4B5229515BC64520073F41E /* HomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,6 +285,7 @@
 				C4145FDB15BC5A1A000D4CE5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
